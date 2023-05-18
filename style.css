@@ -1,0 +1,22 @@
+body{
+    background: linear-gradient(#B799FF,#ACBCFF,#AEE2FF,#E6FFFD);
+}
+
+#head{
+    font-family: 'Bungee', cursive;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.599);
+    padding: 3px;
+    width: 750px;
+}
+
+.footer_div{
+    font-family: 'Bungee', cursive;
+    background-color: rgba(255, 255, 255, 0.599);
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    font-size: bold;
+    line-height: 3;
+}
