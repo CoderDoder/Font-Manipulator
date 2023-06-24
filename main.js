@@ -4,18 +4,20 @@ var lwristX=0;
 var lwristY=0;
 var rwristX=0;
 var rwristY=0;
-var length=0;
+var num=0;
+
 
 function draw(){
     background("white");
-    textSize(size);
+    textSize(num);
     fill("black");
-    text('Ansuman',noseX,noseY);
+    text('Dodo',noseX,noseY);
+    document.getElementById("font_size").innerHTML="Font-size:"+num;
 
 }
 
 function setup(){
-    canvas=createCanvas(400,400);
+    canvas=createCanvas(600,400);
     canvas.position(800,250);
     video=createCapture(VIDEO);
     video.size(450,500);
@@ -46,9 +48,14 @@ function gotPoses(results){
         rwristY=results[0].pose.rightWrist.y;
         console.log("lwristX= "+lwristX+" ,lwristY= "+lwristY);
         console.log("rwristX= "+rwristX+" ,rwristY= "+rwristY);
-        size=floor(lwristX-rwristX);
-        console.log("font size= "+size);
+        num_lwristX=Number(lwristX);
+        num_rwristX=Number(rwristX);
+        console.log("num_lwristX= "+num_lwristX);
+        console.log("num_rwristX= "+num_rwristX)
+        num=floor(num_lwristX-num_rwristX);
+        console.log("font size= "+num);
 
     }
+
 
 }
